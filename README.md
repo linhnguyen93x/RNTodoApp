@@ -1,5 +1,9 @@
 # Ref
-https://github.com/slorber/expo-typescript
+Example from: https://github.com/slorber/expo-typescript
+
+# Tools
+VSCode with tslint plugin.
 
 # Note
-Platform specific extensions not working for typescript. Always get 1 file for both platform
+- Git will auto check lint and format code when commit code --> If lint error, fix it and re-commit.
+- Platform specific extensions not working for typescript. Always get 1 file (android or ios) for both platform. Consider not using this feature (Find solution).
