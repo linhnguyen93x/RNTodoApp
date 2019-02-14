@@ -4,7 +4,7 @@ import 'react-native'
 import * as renderer from 'react-test-renderer'
 
 describe('Main snapshot', () => {
-  it('renders',  () => {
+  it('renders', () => {
     const tree = renderer.create(<Main />).toJSON()
     expect(tree).toMatchSnapshot()
   })

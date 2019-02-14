@@ -6,11 +6,8 @@ export interface ButtonProps {
   onPress: (ev: NativeSyntheticEvent<NativeTouchEvent>) => void
 }
 
-const AppButton = ({title, onPress}: ButtonProps) => (
-  <Button
-    title={title + ' (Android)'}
-    onPress={onPress}
-  />
+const AppButton = ({ title, onPress }: ButtonProps) => (
+  <Button title={`${title} (Android)`} onPress={onPress} />
 )
 
 export default AppButton
