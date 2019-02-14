@@ -1,0 +1,52 @@
+{
+  "name": "my-new-project",
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"yarn run start:expo\" \"yarn run start:typecheck\"",
+    "start:expo": "expo start",
+    "start:typecheck": "tsc --noEmit --watch",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "expo": "^31.0.2",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "react-navigation": "^2.18.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/expo": "30.0.0",
+    "@types/expo__vector-icons": "6.2.3",
+    "@types/fbemitter": "2.0.32",
+    "@types/jest": "^23.3.8",
+    "@types/lodash": "^4.14.117",
+    "@types/react": "16.4.18",
+    "@types/react-native": "0.57.7",
+    "@types/react-navigation": "2.13.0",
+    "@types/react-test-renderer": "^16.0.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-preset-expo": "^5.0.0",
+    "concurrently": "^4.0.1",
+    "jest-expo": "^31.0.0",
+    "lint-staged": "^8.1.4",
+    "prettier": "^1.16.4",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.1.6"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts*": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
