@@ -23,8 +23,13 @@ const ItemComponent = ({
         borderWidth: 0,
         flex: 1,
       }}
+      textStyle={{
+        textDecorationLine: info.done ? 'underline line-through' : 'none',
+        opacity: info.done ? 0.3 : 1,
+      }}
       title={info.name}
       checked={info.done}
+      onPress={() => ctx.updateTodoStatus(info.id)}
     />
     <Button
       containerStyle={{ marginRight: 16 }}

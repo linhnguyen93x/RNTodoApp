@@ -12,10 +12,11 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "lint": "tslint 'src/**/*.{ts,tsx}'",
-    "format": "prettier --config ./.prettierrc --write src/**/*.{ts,tsx} && tslint --project ./tsconfig.json --fix"
+    "format": "tslint --project ./tsconfig.json --fix"
   },
   "dependencies": {
     "expo": "^32.0.0",
+    "firebase": "^5.8.5",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-elements": "^1.1.0",
@@ -54,7 +55,6 @@
   },
   "lint-staged": {
     "{src,test}/**/*.ts*": [
-      "prettier --config ./.prettierrc --write ./src/**/*.{ts,tsx}",
       "tslint --project ./tsconfig.json --fix",
       "git add"
     ]
